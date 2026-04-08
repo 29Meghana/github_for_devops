@@ -4,3 +4,5 @@ git add <filename> = to add untracked file on stage
 git add . = to add all file at same time 
 git commit -m "msg" = to save file permanently on git history 
 git restore <filename> = to restore deleted file 
+git restore --staged <filename>= to unstage file
+git rm --cached <filename>= to unstage file
