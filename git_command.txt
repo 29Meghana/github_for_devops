@@ -6,3 +6,7 @@ git commit -m "msg" = to save file permanently on git history
 git restore <filename> = to restore deleted file 
 git restore --staged <filename>= to unstage file
 git rm --cached <filename>= to unstage file
+  Command	                                  Purpose
+git init	                      Create new local repository
+git clone <url>	                  Download repo from GitHub
+git clone -b <branch> <url>	      Clone specific branch
