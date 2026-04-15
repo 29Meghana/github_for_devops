@@ -37,18 +37,18 @@ git branch -D <branch>	          Force delete branch
 git merge <branch>	              Merge branch
 
 Remote Repository Commands
-git remote add origin <url>	Add remote repo
-git remote -v	View remote repo
-git remote remove origin	Remove remote
-git remote set-url origin <url>	Change repo URL
+git remote add origin <url>	      Add remote repo
+git remote -v	                    View remote repo
+git remote remove origin	        Remove remote
+git remote set-url origin <url>	  Change repo URL
 
 Push & Pull Commands
-git push	Upload changes
-git push origin main	Push specific branch
-git push -u origin main	First push + tracking
-git pull	Download + merge
-git fetch	Download without merge
-git pull --rebase	Pull with rebase
+git push	                        Upload changes
+git push origin main	            Push specific branch
+git push -u origin main	          First push + tracking
+git pull	                        Download + merge
+git fetch	                        Download without merge
+git pull --rebase	                Pull with rebase
 
 Undo / Reset Commands (VERY IMPORTANT)
 git restore <file>	Undo changes in file
