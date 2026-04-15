@@ -10,9 +10,66 @@ git rm --cached <filename>= to unstage file
 git init	                      Create new local repository
 git clone <url>	                  Download repo from GitHub
 git clone -b <branch> <url>	      Clone specific branch
+
+File Tracking Commands
 git status	                      Show current changes
 git add <file>	                  Add specific file
 git add .	                        Add all files
 git add -A	                      Add all changes including deletions
 git rm <file>	                    Remove file from repo
 git mv old new	                  Rename file
+
+Commit Commands
+git commit -m "message"	          Create commit
+git commit -am "msg"	            Add + commit tracked files
+git commit --amend	              Edit last commit
+git commit --no-edit	            Amend without editing message
+
+Branch Commands
+git branch	                      List branches
+git branch <name>	                Create branch
+git checkout <branch>	            Switch branch
+git checkout -b <branch>	        Create + switch branch
+git switch <branch>	              Switch branch (new way)
+git switch -c <branch>	          Create + switch
+git branch -d <branch>	          Delete branch
+git branch -D <branch>	          Force delete branch
+git merge <branch>	              Merge branch
+
+Remote Repository Commands
+git remote add origin <url>	Add remote repo
+git remote -v	View remote repo
+git remote remove origin	Remove remote
+git remote set-url origin <url>	Change repo URL
+
+Push & Pull Commands
+git push	Upload changes
+git push origin main	Push specific branch
+git push -u origin main	First push + tracking
+git pull	Download + merge
+git fetch	Download without merge
+git pull --rebase	Pull with rebase
+
+Undo / Reset Commands (VERY IMPORTANT)
+git restore <file>	Undo changes in file
+git restore --staged <file>	Unstage file
+git reset HEAD <file>	Remove from staging
+git reset --soft HEAD~1	Undo commit keep files
+git reset --mixed HEAD~1	Undo commit unstage files
+git reset --hard HEAD~1	Delete commit permanently ⚠️
+git revert <commit>	Undo commit safely
+
+Viewing History Commands
+git log	View commits
+git log --oneline	Short log
+git log --graph	Graph view
+git show <commit>	Show commit details
+git diff	Show changes
+git diff --staged	Show staged changes
+
+Stash Commands
+git stash	Save changes temporarily
+git stash list	View stash
+git stash pop	Apply stash + remove
+git stash apply	Apply stash keep copy
+git stash drop	Delete stash
