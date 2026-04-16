@@ -1,13 +1,15 @@
-git init = initialize empty git repository
-git status = to check the status of your file 
-git add <filename> = to add untracked file on stage
-git add . = to add all file at same time 
-git commit -m "msg" = to save file permanently on git history 
-git restore <filename> = to restore deleted file 
-git restore --staged <filename>= to unstage file
-git rm --cached <filename>= to unstage file
-  Command	                                  Purpose
-git init	                      Create new local repository
+git init                           initialize empty git repository
+git status                         To check the status of your file 
+git add <filename>                 To add untracked file on stage
+git add .                          To add all file at same time 
+git commit -m "msg"                To save file permanently on git history 
+git restore <filename>             To restore deleted file 
+git restore --staged <filename>    To unstage file
+git rm --cached <filename>         To unstage file
+  
+
+      Command	                                  Purpose
+git init	                        Create new local repository
 git clone <url>	                  Download repo from GitHub
 git clone -b <branch> <url>	      Clone specific branch
 
@@ -51,25 +53,61 @@ git fetch	                        Download without merge
 git pull --rebase	                Pull with rebase
 
 Undo / Reset Commands (VERY IMPORTANT)
-git restore <file>	Undo changes in file
-git restore --staged <file>	Unstage file
-git reset HEAD <file>	Remove from staging
-git reset --soft HEAD~1	Undo commit keep files
-git reset --mixed HEAD~1	Undo commit unstage files
-git reset --hard HEAD~1	Delete commit permanently ⚠️
-git revert <commit>	Undo commit safely
+git restore <file>	            Undo changes in file
+git restore --staged <file>	    Unstage file
+git reset HEAD <file>	          Remove from staging
+git reset --soft HEAD~1	        Undo commit keep files
+git reset --mixed HEAD~1	      Undo commit unstage files
+git reset --hard HEAD~1	        Delete commit permanently ⚠️
+git revert <commit>	            Undo commit safely
 
 Viewing History Commands
-git log	View commits
-git log --oneline	Short log
-git log --graph	Graph view
-git show <commit>	Show commit details
-git diff	Show changes
-git diff --staged	Show staged changes
+git log	                       View commits
+git log --oneline	             Short log
+git log --graph	               Graph view
+git show <commit>	             Show commit details
+git diff	                     Show changes
+git diff --staged	             Show staged changes
 
 Stash Commands
-git stash	Save changes temporarily
-git stash list	View stash
-git stash pop	Apply stash + remove
-git stash apply	Apply stash keep copy
-git stash drop	Delete stash
+git stash	                 Save changes temporarily
+git stash list	           View stash
+git stash pop	             Apply stash + remove
+git stash apply	           Apply stash keep copy
+git stash drop	           Delete stash
+
+Tag Commands (Release versioning)
+git tag	                   List tags
+git tag v1.0	             Create tag
+git push origin v1.0	     Push tag
+git tag -d v1.0	           Delete tag
+
+1️⃣1️⃣ Merge & Rebase Commands
+Advanced collaboration.
+
+git merge <branch>	        Combine branches
+git rebase <branch>	        Reapply commits
+git rebase --continue	      Continue rebase
+git rebase --abort	        Cancel rebase
+
+1️⃣2️⃣ Git Configuration Commands
+Set username, email etc.
+
+git config --global user.name "Name"	         Set username
+git config --global user.email "email"	       Set email
+git config --list	                             View config
+
+1️⃣3️⃣ Collaboration Commands
+Used in team projects.
+
+git pull origin main	               Pull latest code
+git push origin branch	             Push feature branch
+git fetch --all	                     Fetch all remotes
+git blame <file>	                   Who changed code
+git shortlog	                       Contributors list
+
+1️⃣4️⃣ Cleaning Commands
+Remove unwanted files.
+
+git clean -n	            Preview delete
+git clean -f	            Delete untracked files
